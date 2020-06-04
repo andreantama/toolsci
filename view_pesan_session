@@ -10,3 +10,26 @@
                 <strong>Berhasil !</strong> <?php echo $this->session->flashdata("berhasil");?>
             </div>
  <?php endif;?>
+ 
+ ADMIN LTE
+ <?php if($this->session->flashdata("error")):?>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h5><i class="icon fas fa-ban"></i>Terjadi Kesalahan!</h5>
+       <?php echo $this->session->flashdata("error");?>
+      </div>
+ <?php endif;?>
+<?php if($this->session->flashdata("berhasil")):?>
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h5><i class="icon fas fa-check"></i> Berhasil !</h5>
+                 <?php echo $this->session->flashdata("berhasil");?>
+        </div>
+ <?php endif;?>
+ <?php if($this->session->flashdata("perhatian")):?>
+<div class="alert alert-warning alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <h5><i class="icon fas fa-exclamation-triangle"></i> Perhatian!</h5>
+     <?php echo $this->session->flashdata("perhatian");?>
+</div>
+<?php endif;?>
